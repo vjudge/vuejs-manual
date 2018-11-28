@@ -5,8 +5,10 @@
   </head>
   <body>
     <div id="app">
-      {{ message }}
+      <span v-bind:title="message">
+        鼠标悬停几秒钟查看此处动态绑定的提示信息！
+      </span>
     </div>
-    <script src="hello-world.js"></script>
+    <script src="2.v-bind.js"></script>
   </body>
 </html>
