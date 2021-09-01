@@ -5,9 +5,12 @@
   </head>
   <body>
     <div id="app">
-        <p>{{ message }}</p>
-    <input v-model="message">
+      <ol>
+        <todo-item
+          v-for="item in todos" v-bind:todo="item" v-bind:key="item.id">
+        </todo-item>
+      </ol>
     </div>
-    <script src="4.v-model.js"></script>
+    <script src="8.props.js"></script>
   </body>
 </html>
