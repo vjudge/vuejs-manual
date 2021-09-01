@@ -5,11 +5,7 @@
   </head>
   <body>
     <div id="app">
-      <ol>
-        <li v-for="todo in todos">
-          {{ todo.text }}
-        </li>
-      </ol>
+      <p v-if="seen">现在你看到我了</p>
     </div>
     <script src="3.v-if.js"></script>
   </body>
