@@ -19,3 +19,9 @@ v-bind:[attribute]="[value_name]"
 
 
 ### v-if
+
+
+### v-on
+```
+<a v-on:[eventName]="doSomething"> ... </a>
+```
