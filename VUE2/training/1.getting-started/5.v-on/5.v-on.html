@@ -5,8 +5,29 @@
   </head>
   <body>
     <div id="app">
-      <p>{{ message }}</p>
-      <button v-on:click="reverseMessage">逆转消息</button>
+      <div  id="example-1">
+        <br /><br />
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">逆转消息</button>
+      </div>
+
+      <div  id="example-2">
+        <br /><br />
+        <button v-on:click="counter += 1">Add 1</button>
+        <p>The button above has been clicked {{ counter }} times.</p>
+      </div>
+
+      <div id="example-3">
+        <br /><br />
+        <!-- `greet` 是在下面定义的方法名 -->
+        <button v-on:click="greet">Greet</button>
+      </div>
+
+      <div id="example-4">
+        <br /><br />
+        <button v-on:click="say('hi')">Say hi</button>
+        <button v-on:click="say('what')">Say what</button>
+      </div>
     </div>
     <script src="5.v-on.js"></script>
   </body>
