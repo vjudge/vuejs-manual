@@ -5,8 +5,78 @@
   </head>
   <body>
     <div id="app">
-        <p>{{ message }}</p>
-    <input v-model="message">
+        <div>
+          <br /><br />
+          <input v-model="message" placeholder="edit me">
+          <p>{{ message }}</p>
+        </div>
+
+        <div>
+          <br /><br />
+          <textarea v-model="areaMsg" placeholder="add multiple lines"></textarea><br />
+          <span>Multiline message is:</span>
+          <p style="white-space: pre-line;">{{ areaMsg }}</p>
+        </div>
+
+        <div>
+          <br /><br />
+          <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+          <label for="jack">Jack</label>
+          <input type="checkbox" id="john" value="John" v-model="checkedNames">
+          <label for="john">John</label>
+          <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+          <label for="mike">Mike</label>
+          <br>
+          <span>Checked names: {{ checkedNames }}</span>
+        </div>
+
+        <div>
+          <br /><br />
+          <input type="radio" id="one" value="One" v-model="picked">
+          <label for="one">One</label>
+          <br>
+          <input type="radio" id="two" value="Two" v-model="picked">
+          <label for="two">Two</label>
+          <br>
+          <span>Picked: {{ picked }}</span>
+        </div>
+
+        <div>
+          <br /><br />
+          <select v-model="selected">
+            <option disabled value="">请选择</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+          </select>
+          <span>Selected: {{ selected }}</span>
+        </div>
+
+        <div>
+          <br /><br />
+          <select v-model="multipleSelected" multiple style="width: 50px;">
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+          </select>
+          <br>
+          <span>Selected: {{ multipleSelected }}</span>
+        </div>
+
+        <div>
+          <br /><br />
+          <select v-model="vforselected">
+            <option v-for="option in options" v-bind:value="option.value">
+              {{ option.text }}
+            </option>
+          </select>
+          <span>Selected: {{ vforselected }}</span>
+        </div>
+
+        <div>
+          <br /><br />
+          <input type="checkbox" v-model="toggle" true-value="yes" false-value="no" />{{toggle}}
+        </div>
     </div>
     <script src="6.v-model.js"></script>
   </body>
