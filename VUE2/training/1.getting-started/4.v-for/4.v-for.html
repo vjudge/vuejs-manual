@@ -5,11 +5,28 @@
   </head>
   <body>
     <div id="app">
+
       <ol>
         <li v-for="todo in todos">
           {{ todo.text }}
         </li>
       </ol>
+
+      <ol>
+        <li v-for="todo of todos">
+          {{ todo.text }}
+        </li>
+      </ol>
+
+      <br />(value, name)
+      <div v-for="(value, name) in objects" v-bind:key="name">
+        {{ name }}: {{ value }}
+      </div>
+
+      <br />(value, name, index)
+      <div v-for="(value, name, index) in objects">
+        {{ index }}. {{ name }}: {{ value }}
+      </div>
     </div>
     <script src="4.v-for.js"></script>
   </body>
